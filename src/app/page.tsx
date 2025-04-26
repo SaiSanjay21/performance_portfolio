@@ -115,14 +115,18 @@ export default function Home() {
               Check out my open-source contributions and projects. I'm passionate about sharing knowledge and collaborating with the community.
             </p>
             <Button variant="outline" className="gap-2" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/SaiSanjay21" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
                 Visit GitHub Profile
               </a>
             </Button>
           </div>
           <div className="md:w-1/2 w-full h-60 bg-muted rounded-lg flex items-center justify-center">
-            <span className="text-muted-foreground">GitHub Contribution Graph</span>
+            <img
+              src="https://ghchart.rshah.org/SaiSanjay21"
+              alt="GitHub Contribution Graph"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </section>

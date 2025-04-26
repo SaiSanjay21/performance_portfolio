@@ -34,7 +34,7 @@ export function SiteFooter() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://github.com/SaiSanjay21" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </a>

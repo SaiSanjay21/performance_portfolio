@@ -24,7 +24,14 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-xl">Portfolio</span>
+            <span className="inline-block mr-2">
+              {/* Simple logo symbol SVG */}
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="14" fill="#E11D48"/>
+                <path d="M9 19L19 9M9 9h10v10" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
+            <span className="font-bold text-xl">web-scroller</span>
           </Link>
         </div>
 
