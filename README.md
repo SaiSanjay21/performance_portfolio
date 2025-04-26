@@ -37,3 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ### ABOUT
 This gives a whole new experinece to have an performance metrics on your website.
+
+![image](https://github.com/user-attachments/assets/ab0fa308-4a59-4f91-99e3-2185a5570816)
+
