@@ -5,21 +5,7 @@ import Image from "next/image";
 
 // Detailed project data with real images
 const projects = [
-  {
-    id: "ecommerce-platform",
-    title: "Modern E-Commerce Platform",
-    description:
-      "A fully responsive e-commerce platform with comprehensive features including product filtering, shopping cart, user authentication, and payment processing. The platform offers a seamless shopping experience across all devices and includes an admin dashboard for inventory management.",
-    longDescription:
-      "This feature-rich e-commerce solution was built with scalability in mind. The platform includes advanced features such as real-time inventory tracking, customizable product filtering, user reviews and ratings, and a secure checkout process. A sophisticated admin dashboard allows store owners to manage products, track orders, and analyze sales data through interactive charts. The responsive design ensures a consistent shopping experience across desktop, tablet, and mobile devices.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Stripe API", "PostgreSQL", "Prisma ORM"],
-    imageUrl: "/projects/ecommerce.jpg",
-    demoUrl: "https://example.com/ecommerce",
-    githubUrl: "https://github.com/example/ecommerce",
-    featured: true,
-    challenges: "Implementing a seamless checkout experience while maintaining security standards was challenging. Another challenge was optimizing image loading for product galleries to maintain fast page loads.",
-    solutions: "Used Stripe's powerful API for secure payments and implemented image optimization strategies with Next.js Image component and lazy loading.",
-  },
+ 
   {
     id: "data-dashboard",
     title: "Interactive Analytics Dashboard",
@@ -81,20 +67,35 @@ const projects = [
     solutions: "Implemented a modular content block system and utilized Next.js static generation with incremental static regeneration for optimal performance and SEO.",
   },
   {
-    id: "weather-app",
-    title: "Interactive Weather Application",
-    description:
-      "A feature-rich weather application providing location-based forecasts, interactive maps, and severe weather alerts. Offers hourly and 10-day forecasts with detailed meteorological data.",
-    longDescription:
-      "This weather application was developed to provide users with accurate and detailed weather information in an intuitive interface. The app features location-based weather forecasts, interactive radar maps, hourly and 10-day predictions, and severe weather alerts. Users can save multiple locations, view historical weather data, and access detailed meteorological information such as precipitation probability, wind speed, UV index, and air quality. The app uses animations to represent different weather conditions and includes a widget for quick access to current conditions.",
-    technologies: ["JavaScript", "HTML5", "CSS3", "OpenWeather API", "Google Maps API", "Progressive Web App", "Local Storage"],
-    imageUrl: "/projects/placeholder-project.jpg",
-    demoUrl: "https://example.com/weather",
-    githubUrl: "https://github.com/example/weather",
-    featured: false,
-    challenges: "Processing and visualizing complex meteorological data in a user-friendly way and optimizing API calls to balance freshness of data with performance considerations.",
-    solutions: "Created custom visualization components for weather data and implemented a caching strategy to minimize API calls while maintaining data accuracy.",
+    id: 'unisearch',
+    title: 'UniSearch',
+    description: 'Intelligent communication search platform that unifies customer interactions across channels using advanced NLP for enhanced financial services support',
+    technologies: ['React', 'Spring Boot', 'AWS', 'NLP', 'Microservices', 'PostgreSQL'],
+    imageUrl: '/projects/search-engine.svg',
+    demoUrl: 'https://example.com/unisearch',
+    githubUrl: 'https://github.com/example/unisearch',
+    featured: true
   },
+  {
+    id: 'eduflow',
+    title: 'EduFlow',
+    description: 'Modern learning management system with intuitive dashboards and role-based access control for streamlined educational service delivery',
+    technologies: ['React.js', 'Django', 'Azure', 'RBAC', 'REST API'],
+    imageUrl: '/projects/education-system.svg',
+    demoUrl: 'https://example.com/eduflow',
+    githubUrl: 'https://github.com/example/eduflow',
+    featured: true
+  },
+  {
+    id: 'splitai',
+    title: 'SplitAI',
+    description: 'Smart expense splitting app that uses AI vision to scan receipts and automatically identify items and prices for easy group expense management',
+    technologies: ['Python', 'React', 'Azure', 'Computer Vision', 'AI/ML'],
+    imageUrl: '/projects/expense-app.svg',
+    demoUrl: 'https://example.com/splitai',
+    githubUrl: 'https://github.com/example/splitai',
+    featured: true
+  }
 ];
 
 export default function ProjectsPage() {

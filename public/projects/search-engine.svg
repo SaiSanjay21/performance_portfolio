@@ -1,0 +1,123 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and patterns -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Search icon gradient -->
+    <linearGradient id="searchGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Data points pattern -->
+    <pattern id="dataPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="2" fill="#0ea5e9" opacity="0.2" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" rx="20" />
+  
+  <!-- Data points background -->
+  <rect width="800" height="600" fill="url(#dataPattern)" opacity="0.5" />
+  
+  <!-- Search interface elements -->
+  <g transform="translate(250, 200)">
+    <!-- Search circle -->
+    <circle cx="150" cy="150" r="100" 
+            stroke="url(#searchGradient)" 
+            stroke-width="20" 
+            fill="none" />
+    
+    <!-- Search handle -->
+    <line x1="220" y1="220" x2="300" y2="300" 
+          stroke="url(#searchGradient)" 
+          stroke-width="20" 
+          stroke-linecap="round" />
+  </g>
+  
+  <!-- Connected data points -->
+  <g transform="translate(100, 100)">
+    <!-- Data nodes -->
+    <circle cx="100" cy="100" r="8" fill="#0ea5e9" />
+    <circle cx="300" cy="150" r="8" fill="#0ea5e9" />
+    <circle cx="500" cy="200" r="8" fill="#0ea5e9" />
+    <circle cx="200" cy="300" r="8" fill="#0ea5e9" />
+    <circle cx="400" cy="350" r="8" fill="#0ea5e9" />
+    
+    <!-- Connections -->
+    <line x1="100" y1="100" x2="300" y2="150" stroke="#0ea5e9" stroke-width="2" />
+    <line x1="300" y1="150" x2="500" y2="200" stroke="#0ea5e9" stroke-width="2" />
+    <line x1="500" y1="200" x2="400" y2="350" stroke="#0ea5e9" stroke-width="2" />
+    <line x1="400" y1="350" x2="200" y2="300" stroke="#0ea5e9" stroke-width="2" />
+    <line x1="200" y1="300" x2="100" y2="100" stroke="#0ea5e9" stroke-width="2" />
+  </g>
+  
+  <!-- Typography elements -->
+  <g transform="translate(300, 450)">
+    <text x="0" y="0" 
+          font-family="Arial, sans-serif" 
+          font-size="24" 
+          fill="#0ea5e9" 
+          font-weight="bold">UniSearch</text>
+    <text x="0" y="30" 
+          font-family="Arial, sans-serif" 
+          font-size="16" 
+          fill="#64748b">Intelligent Search Platform</text>
+  </g>
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff" />
+  
+  <!-- Modern Search Interface -->
+  <g transform="translate(250, 150)">
+    <!-- Search Bar -->
+    <rect x="0" y="0" width="300" height="60" rx="30" fill="url(#searchGradient)" />
+    
+    <!-- Magnifying Glass -->
+    <g transform="translate(20, 15)">
+      <!-- Glass -->
+      <circle cx="15" cy="15" r="12" fill="none" stroke="#ffffff" stroke-width="3" />
+      <!-- Handle -->
+      <line x1="24" y1="24" x2="35" y2="35" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    </g>
+    
+    <!-- Pulse Animation -->
+    <circle cx="15" cy="15" r="8" fill="#ffffff" opacity="0.3">
+      <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g transform="translate(300, 250)" stroke="url(#linesGradient)" stroke-width="2">
+    <path d="M0,0 Q100,50 200,0" fill="none" />
+    <path d="M50,30 Q150,80 250,30" fill="none" opacity="0.7" />
+    <path d="M-30,60 Q70,110 170,60" fill="none" opacity="0.4" />
+  </g>
+  
+  <!-- Data Points -->
+  <g transform="translate(300, 250)">
+    <circle cx="0" cy="0" r="4" fill="#0ea5e9" />
+    <circle cx="200" cy="0" r="4" fill="#0ea5e9" />
+    <circle cx="50" cy="30" r="4" fill="#0ea5e9" />
+    <circle cx="250" cy="30" r="4" fill="#0ea5e9" />
+    <circle cx="-30" cy="60" r="4" fill="#0ea5e9" />
+    <circle cx="170" cy="60" r="4" fill="#0ea5e9" />
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="searchGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="linesGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

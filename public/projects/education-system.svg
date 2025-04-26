@@ -1,0 +1,154 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and patterns -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fafafa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f4f4f5;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Progress bar gradient -->
+    <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Chart gradient -->
+    <linearGradient id="chartGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" rx="20" />
+  
+  <!-- Dashboard elements -->
+  <g transform="translate(100, 100)">
+    <!-- Progress indicators -->
+    <g transform="translate(0, 0)">
+      <!-- Progress bar 1 -->
+      <rect x="0" y="0" width="300" height="20" rx="10" fill="#e5e7eb" />
+      <rect x="0" y="0" width="240" height="20" rx="10" fill="url(#progressGradient)" />
+      <text x="320" y="15" font-family="Arial, sans-serif" font-size="14" fill="#374151">80%</text>
+      
+      <!-- Progress bar 2 -->
+      <rect x="0" y="40" width="300" height="20" rx="10" fill="#e5e7eb" />
+      <rect x="0" y="40" width="180" height="20" rx="10" fill="url(#progressGradient)" />
+      <text x="320" y="55" font-family="Arial, sans-serif" font-size="14" fill="#374151">60%</text>
+      
+      <!-- Progress bar 3 -->
+      <rect x="0" y="80" width="300" height="20" rx="10" fill="#e5e7eb" />
+      <rect x="0" y="80" width="270" height="20" rx="10" fill="url(#progressGradient)" />
+      <text x="320" y="95" font-family="Arial, sans-serif" font-size="14" fill="#374151">90%</text>
+    </g>
+    
+    <!-- Performance chart -->
+    <g transform="translate(0, 150)">
+      <!-- Chart background -->
+      <rect x="0" y="0" width="300" height="200" fill="white" rx="10" />
+      
+      <!-- Chart grid -->
+      <line x1="0" y1="50" x2="300" y2="50" stroke="#e5e7eb" stroke-width="1" />
+      <line x1="0" y1="100" x2="300" y2="100" stroke="#e5e7eb" stroke-width="1" />
+      <line x1="0" y1="150" x2="300" y2="150" stroke="#e5e7eb" stroke-width="1" />
+      
+      <!-- Chart line -->
+      <path d="M0,150 C50,120 100,80 150,100 C200,120 250,60 300,50" 
+            stroke="#22c55e" 
+            stroke-width="3" 
+            fill="none" />
+      
+      <!-- Chart area -->
+      <path d="M0,150 C50,120 100,80 150,100 C200,120 250,60 300,50 L300,200 L0,200 Z" 
+            fill="url(#chartGradient)" />
+    </g>
+  </g>
+  
+  <!-- Dashboard cards -->
+  <g transform="translate(450, 100)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="250" height="100" rx="10" fill="white" stroke="#e5e7eb" />
+    <text x="20" y="35" font-family="Arial, sans-serif" font-size="18" fill="#22c55e" font-weight="bold">92%</text>
+    <text x="20" y="65" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Completion Rate</text>
+    
+    <!-- Card 2 -->
+    <rect x="0" y="120" width="250" height="100" rx="10" fill="white" stroke="#e5e7eb" />
+    <text x="20" y="155" font-family="Arial, sans-serif" font-size="18" fill="#22c55e" font-weight="bold">4.8/5.0</text>
+    <text x="20" y="185" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Average Rating</text>
+    
+    <!-- Card 3 -->
+    <rect x="0" y="240" width="250" height="100" rx="10" fill="white" stroke="#e5e7eb" />
+    <text x="20" y="275" font-family="Arial, sans-serif" font-size="18" fill="#22c55e" font-weight="bold">2,500+</text>
+    <text x="20" y="305" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Active Users</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="500" 
+        font-family="Arial, sans-serif" 
+        font-size="24" 
+        fill="#22c55e" 
+        font-weight="bold" 
+        text-anchor="middle">EduFlow</text>
+  <text x="400" y="530" 
+        font-family="Arial, sans-serif" 
+        font-size="16" 
+        fill="#6b7280" 
+        text-anchor="middle">Modern Learning Platform</text>
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff" />
+  
+  <!-- Modern Dashboard Elements -->
+  <g transform="translate(200, 100)">
+    <!-- Main Card -->
+    <rect x="0" y="0" width="400" height="300" rx="20" fill="url(#cardGradient)" />
+    
+    <!-- Header Bar -->
+    <rect x="20" y="20" width="360" height="50" rx="10" fill="#ffffff" opacity="0.9" />
+    
+    <!-- Progress Circles -->
+    <g transform="translate(40, 100)">
+      <!-- Circle 1 -->
+      <circle cx="60" cy="60" r="40" fill="none" stroke="#ffffff" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="62.8" />
+      <text x="60" y="60" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial">75%</text>
+      
+      <!-- Circle 2 -->
+      <circle cx="180" cy="60" r="40" fill="none" stroke="#ffffff" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="125.6" />
+      <text x="180" y="60" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial">50%</text>
+      
+      <!-- Circle 3 -->
+      <circle cx="300" cy="60" r="40" fill="none" stroke="#ffffff" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="188.4" />
+      <text x="300" y="60" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial">25%</text>
+    </g>
+    
+    <!-- Chart Lines -->
+    <g transform="translate(40, 200)" stroke="#ffffff" stroke-width="2">
+      <path d="M0,40 L80,20 L160,30 L240,10 L320,25" fill="none" />
+      <circle cx="0" cy="40" r="4" fill="#ffffff" />
+      <circle cx="80" cy="20" r="4" fill="#ffffff" />
+      <circle cx="160" cy="30" r="4" fill="#ffffff" />
+      <circle cx="240" cy="10" r="4" fill="#ffffff" />
+      <circle cx="320" cy="25" r="4" fill="#ffffff" />
+    </g>
+  </g>
+  
+  <!-- Floating Elements -->
+  <g transform="translate(150, 450)">
+    <!-- Progress Bars -->
+    <rect x="0" y="0" width="200" height="20" rx="10" fill="url(#progressGradient)" />
+    <rect x="220" y="0" width="150" height="20" rx="10" fill="url(#progressGradient)" opacity="0.8" />
+    <rect x="390" y="0" width="100" height="20" rx="10" fill="url(#progressGradient)" opacity="0.6" />
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

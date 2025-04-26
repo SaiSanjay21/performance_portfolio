@@ -4,7 +4,7 @@ import "./globals.css";
 import ClientBody from "./ClientBody";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { PerformanceTracker } from "@/components/performance-tracker";
+import { EnhancedPerformanceMetrics } from "@/components/enhanced-performance-metrics";
 import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
@@ -34,7 +34,7 @@ export default function RootLayout({
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
-          <PerformanceTracker />
+          <EnhancedPerformanceMetrics />
           <Toaster />
         </div>
       </ClientBody>

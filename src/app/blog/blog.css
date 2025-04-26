@@ -1,37 +1,217 @@
-/* Blog post content styling */
+/* Enhanced Blog Styling */
+
+/* Typography enhancements */
 .prose h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.75rem;
+  font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  color: hsl(var(--primary));
+  position: relative;
+}
+
+.prose h2::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0.5rem;
+  width: 0.25rem;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, hsl(var(--primary)), hsl(var(--secondary)));
+  border-radius: 4px;
+  opacity: 0.7;
 }
 
 .prose h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
+  color: hsl(var(--primary) / 0.9);
 }
 
 .prose p {
   margin-bottom: 1.25rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-.prose ul, .prose ol {
-  margin-bottom: 1.25rem;
+/* List styling */
+.prose ul,
+.prose ol {
+  margin: 1.5rem 0;
   padding-left: 1.5rem;
 }
 
 .prose li {
   margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.prose ul li::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0.6rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  background-color: hsl(var(--primary) / 0.6);
+  border-radius: 50%;
 }
 
 .prose strong {
   font-weight: 600;
+  color: hsl(var(--primary) / 0.9);
+}
+
+/* Blockquote styling */
+.prose blockquote {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid hsl(var(--primary) / 0.5);
+  background-color: hsl(var(--muted) / 0.3);
+  border-radius: 0.25rem;
+  font-style: italic;
+}
+
+.prose blockquote p {
+  margin-bottom: 0;
+}
+
+/* Code block styling */
+.prose pre {
+  background-color: hsl(var(--muted));
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid hsl(var(--border));
+}
+
+.prose code {
+  font-family: var(--font-geist-mono);
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  background-color: hsl(var(--muted));
+  border-radius: 0.25rem;
+}
+
+.prose pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Table styling */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+}
+
+.prose th {
+  background-color: hsl(var(--muted));
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid hsl(var(--border) / 0.5);
+}
+
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+/* Image styling */
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px hsl(var(--muted) / 0.5);
+}
+
+/* Link styling */
+.prose a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  border-bottom: 1px dashed hsl(var(--primary) / 0.5);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.prose a:hover {
+  color: hsl(var(--secondary));
+  border-bottom: 1px solid hsl(var(--secondary));
 }
 
 /* Dark mode adjustments */
 .dark .prose {
   color: rgba(255, 255, 255, 0.9);
+}
+
+:root[class~="dark"] .prose blockquote {
+  background-color: hsl(var(--muted) / 0.2);
+}
+
+:root[class~="dark"] .prose pre {
+  background-color: hsl(var(--muted) / 0.8);
+}
+
+/* Blog content specific styling */
+.blog-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--primary));
+  position: relative;
+}
+
+.blog-content h2::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0.5rem;
+  width: 0.25rem;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, hsl(var(--primary)), hsl(var(--secondary)));
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes highlight {
+  0% {
+    background-color: hsl(var(--primary) / 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.prose h2:target,
+.prose h3:target,
+.blog-content h2:target,
+.blog-content h3:target {
+  animation: highlight 2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .prose h2::before,
+  .blog-content h2::before {
+    left: -0.75rem;
+    width: 0.2rem;
+  }
+  
+  .prose blockquote,
+  .blog-content blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+  }
 }

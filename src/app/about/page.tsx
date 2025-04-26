@@ -34,15 +34,15 @@ export default function AboutPage() {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  React & Next.js
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  Vue.js & Nuxt
+                  React.js & Next.js
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
                   TypeScript
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
+                  HTML/CSS
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
@@ -60,19 +60,19 @@ export default function AboutPage() {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  Node.js & Express
+                  Spring Boot
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  PostgreSQL & MongoDB
+                  Django & FastAPI
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  GraphQL
+                  AWS Lambda/EC2/S3
                 </li>
                 <li className="flex items-center">
                   <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  Firebase & Supabase
+                  REST APIs
                 </li>
               </ul>
             </CardContent>
@@ -99,21 +99,21 @@ export default function AboutPage() {
 
           <div className="relative pl-8 border-l border-muted">
             <div className="absolute -left-1.5 h-3 w-3 rounded-full bg-primary" />
-            <div className="mb-1 text-sm text-muted-foreground">2018 - 2021</div>
+            <div className="mb-1 text-sm text-muted-foreground">Feb 2020 - Nov 2022</div>
             <h3 className="text-lg font-semibold">Full Stack Developer</h3>
-            <p className="text-muted-foreground">WebSolutions Ltd.</p>
+            <p className="text-muted-foreground">NetCracker Technology, Chicago, IL</p>
             <p className="mt-2">
-              Developed and maintained multiple client websites, implemented e-commerce solutions, and optimized database performance.
+              Developed financial applications using React.js/Spring Boot, deployed microservices on AWS/GCP with Kubernetes, and implemented CI/CD pipelines with Git/Jenkins.
             </p>
           </div>
 
           <div className="relative pl-8 border-l border-muted">
             <div className="absolute -left-1.5 h-3 w-3 rounded-full bg-primary" />
-            <div className="mb-1 text-sm text-muted-foreground">2016 - 2018</div>
-            <h3 className="text-lg font-semibold">Junior Web Developer</h3>
-            <p className="text-muted-foreground">Digital Agency XYZ</p>
+            <div className="mb-1 text-sm text-muted-foreground">May 2019 – Jan 2020</div>
+            <h3 className="text-lg font-semibold">Java Developer</h3>
+            <p className="text-muted-foreground">Techborn IT Solutions, Bangalore, India</p>
             <p className="mt-2">
-              Assisted in the development of marketing websites, implemented responsive designs, and created interactive UI components.
+              Developed backend services with Servlets/JDBC, collaborated on React.js frontends, and implemented CI/CD workflows.
             </p>
           </div>
         </div>
@@ -126,6 +126,17 @@ export default function AboutPage() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-card rounded-lg p-6 border">
+            <h3 className="text-lg font-semibold mb-2">AWS Certified Developer – Associate 2024</h3>
+            <p className="text-muted-foreground">
+              <img 
+                src="/aws-badge.png" 
+                alt="AWS Certified" 
+                className="h-16 w-16 mr-4 inline-block" 
+              />
+              Validated expertise in cloud development and deployment
+            </p>
+          </div>
           <div className="bg-card rounded-lg p-6 border">
             <h3 className="text-lg font-semibold mb-2">Hackathon Winner 2022</h3>
             <p className="text-muted-foreground">
