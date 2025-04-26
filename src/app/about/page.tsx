@@ -1,170 +1,293 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Code2, Coffee, GraduationCap, Palette, Trophy } from "lucide-react";
-
+"use client";
+import { 
+  Card, 
+  CardContent, 
+  CardHeader, 
+  CardTitle, 
+  CardDescription 
+} from "@/components/ui/card";  // Path correction
+import { motion } from "framer-motion";
 export default function AboutPage() {
   return (
     <div className="container py-12 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-6">About Me</h1>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-purple-600 text-transparent bg-clip-text">About Me</h1>
 
-      {/* Bio Section */}
-      <section className="mb-12">
-        <p className="text-lg mb-4 text-muted-foreground">
-          Hi there! I'm a passionate full-stack developer with expertise in building modern web applications.
-          I love creating elegant solutions to complex problems and have a keen eye for detail and design.
-        </p>
-        <p className="text-lg mb-4 text-muted-foreground">
-          My journey in development started over 5 years ago, and since then, I've worked on numerous
-          projects ranging from small business websites to complex enterprise applications. I'm constantly
-          learning and evolving my skills to stay ahead in this ever-changing field.
-        </p>
-      </section>
+        {/* Bio Section */}
+        <section className="mb-12">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="text-2xl">👋</span>
+            <p className="text-xl font-medium">Hello World!</p>
+          </div>
+          <p className="text-lg mb-4 text-muted-foreground leading-relaxed">
+            I'm a passionate full-stack developer crafting modern web experiences. 💻 Currently working as a Flutter Developer at WeXL, where I blend creativity with technical expertise to build innovative solutions.
+          </p>
+          <p className="text-lg mb-4 text-muted-foreground leading-relaxed">
+            🚀 My journey in tech is driven by curiosity and a love for problem-solving. When I'm not coding, you'll find me exploring competitive programming challenges and diving deep into backend engineering.
+          </p>
+        </section>
 
       {/* Skills Section */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 flex items-center">
-          <Brain className="mr-2 h-6 w-6 text-primary" /> Skills & Expertise
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span className="text-2xl">🛠️</span> Skills & Expertise
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Card>
-            <CardContent className="pt-6">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <Code2 className="mr-2 h-5 w-5 text-primary" /> Front-end
-              </h3>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  React.js & Next.js
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  TypeScript
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  HTML/CSS
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  Tailwind CSS
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                    <span className="text-xl">🎨</span> Front-end
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>⚛️</span> React.js & Next.js
+                    </li>
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>📱</span> Flutter & Dart
+                    </li>
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>🔷</span> TypeScript
+                    </li>
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>🎭</span> Tailwind CSS
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-          <Card>
-            <CardContent className="pt-6">
-              <h3 className="text-xl font-semibold mb-4 flex items-center">
-                <Coffee className="mr-2 h-5 w-5 text-primary" /> Back-end
-              </h3>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  Spring Boot
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  Django & FastAPI
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  AWS Lambda/EC2/S3
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2 h-2 w-2 rounded-full bg-primary" />
-                  REST APIs
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                    <span className="text-xl">⚙️</span> Back-end
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>☕</span> Spring Boot
+                    </li>
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>🐍</span> Django & FastAPI
+                    </li>
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>☁️</span> AWS Services
+                    </li>
+                    <li className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <span>🔌</span> REST APIs
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Experience Timeline */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 flex items-center">
-          <GraduationCap className="mr-2 h-6 w-6 text-primary" /> Experience
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span className="text-2xl">💼</span> Experience
+          </h2>
 
-        <div className="space-y-8">
-          <div className="relative pl-8 border-l border-muted">
-            <div className="absolute -left-1.5 h-3 w-3 rounded-full bg-primary" />
-            <div className="mb-1 text-sm text-muted-foreground">2021 - Present</div>
-            <h3 className="text-lg font-semibold">Senior Frontend Developer</h3>
-            <p className="text-muted-foreground">TechCorp Inc.</p>
-            <p className="mt-2">
-              Leading the frontend development team, building scalable web applications, and implementing design systems.
-            </p>
-          </div>
+          <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="relative pl-8 border-l border-muted hover:border-primary transition-colors duration-300"
+            >
+              <div className="absolute -left-3 p-2 bg-background border-2 border-primary rounded-full">
+                <span className="text-lg">💻</span>
+              </div>
+              <div className="mb-1 text-sm font-medium text-primary">2021 - Present</div>
+              <h3 className="text-lg font-semibold">Flutter Developer</h3>
+              <p className="text-muted-foreground">WeXL</p>
+              <p className="mt-2 text-muted-foreground">
+                Building innovative mobile applications using Flutter, implementing responsive UI designs, and optimizing app performance.
+              </p>
+            </motion.div>
 
-          <div className="relative pl-8 border-l border-muted">
-            <div className="absolute -left-1.5 h-3 w-3 rounded-full bg-primary" />
-            <div className="mb-1 text-sm text-muted-foreground">Feb 2020 - Nov 2022</div>
-            <h3 className="text-lg font-semibold">Full Stack Developer</h3>
-            <p className="text-muted-foreground">NetCracker Technology, Chicago, IL</p>
-            <p className="mt-2">
-              Developed financial applications using React.js/Spring Boot, deployed microservices on AWS/GCP with Kubernetes, and implemented CI/CD pipelines with Git/Jenkins.
-            </p>
-          </div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="relative pl-8 border-l border-muted hover:border-primary transition-colors duration-300"
+            >
+              <div className="absolute -left-3 p-2 bg-background border-2 border-primary rounded-full">
+                <span className="text-lg">🚀</span>
+              </div>
+              <div className="mb-1 text-sm font-medium text-primary">2020 - 2021</div>
+              <h3 className="text-lg font-semibold">Full Stack Developer</h3>
+              <p className="text-muted-foreground">NetCracker Technology</p>
+              <p className="mt-2 text-muted-foreground">
+                Developed scalable web applications using React.js and Spring Boot, implemented microservices architecture, and managed cloud deployments.
+              </p>
+            </motion.div>
 
-          <div className="relative pl-8 border-l border-muted">
-            <div className="absolute -left-1.5 h-3 w-3 rounded-full bg-primary" />
-            <div className="mb-1 text-sm text-muted-foreground">May 2019 – Jan 2020</div>
-            <h3 className="text-lg font-semibold">Java Developer</h3>
-            <p className="text-muted-foreground">Techborn IT Solutions, Bangalore, India</p>
-            <p className="mt-2">
-              Developed backend services with Servlets/JDBC, collaborated on React.js frontends, and implemented CI/CD workflows.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="relative pl-8 border-l border-muted hover:border-primary transition-colors duration-300"
+            >
+              <div className="absolute -left-3 p-2 bg-background border-2 border-primary rounded-full">
+                <span className="text-lg">⚡</span>
+              </div>
+              <div className="mb-1 text-sm font-medium text-primary">2019 - 2020</div>
+              <h3 className="text-lg font-semibold">Backend Developer</h3>
+              <p className="text-muted-foreground">Techborn IT Solutions</p>
+              <p className="mt-2 text-muted-foreground">
+                Engineered robust backend services and RESTful APIs, collaborated with frontend teams, and implemented efficient database solutions.
+              </p>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Achievements */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 flex items-center">
-          <Trophy className="mr-2 h-6 w-6 text-primary" /> Achievements
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        >
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span className="text-2xl">🏆</span> Achievements
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-card rounded-lg p-6 border">
-            <h3 className="text-lg font-semibold mb-2">AWS Certified Developer – Associate 2024</h3>
-            <p className="text-muted-foreground">
-              <img 
-                src="/aws-badge.png" 
-                alt="AWS Certified" 
-                className="h-16 w-16 mr-4 inline-block" 
-              />
-              Validated expertise in cloud development and deployment
-            </p>
-          </div>
-          <div className="bg-card rounded-lg p-6 border">
-            <h3 className="text-lg font-semibold mb-2">Hackathon Winner 2022</h3>
-            <p className="text-muted-foreground">
-              First place at the Regional Web Development Hackathon for building an innovative accessibility tool.
-            </p>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className="bg-card rounded-lg p-6 border hover:border-primary hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl">☁️</span>
+                <h3 className="text-lg font-semibold">AWS Certified Developer</h3>
+              </div>
+              <p className="text-muted-foreground">
+                Achieved AWS Developer certification, demonstrating expertise in cloud architecture and deployment strategies.
+              </p>
+            </motion.div>
 
-          <div className="bg-card rounded-lg p-6 border">
-            <h3 className="text-lg font-semibold mb-2">Open Source Contributor</h3>
-            <p className="text-muted-foreground">
-              Active contributor to several popular open-source projects with over 50 merged pull requests.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+              className="bg-card rounded-lg p-6 border hover:border-primary hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl">🎯</span>
+                <h3 className="text-lg font-semibold">Hackathon Champion</h3>
+              </div>
+              <p className="text-muted-foreground">
+                Led team to victory in Regional Hackathon, developing an innovative accessibility solution.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+              className="bg-card rounded-lg p-6 border hover:border-primary hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl">🌟</span>
+                <h3 className="text-lg font-semibold">Open Source Impact</h3>
+              </div>
+              <p className="text-muted-foreground">
+                Active contributor to open-source projects, with significant contributions and merged pull requests.
+              </p>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Interests */}
       <section>
-        <h2 className="text-2xl font-bold mb-6 flex items-center">
-          <Palette className="mr-2 h-6 w-6 text-primary" /> Interests
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
+        >
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span className="text-2xl">🌈</span> Interests & Hobbies
+          </h2>
 
-        <div className="bg-card rounded-lg p-6 border">
-          <p className="text-muted-foreground">
-            When I'm not coding, you'll find me exploring hiking trails, reading science fiction, experimenting with photography, or contributing to tech community events. I'm also passionate about mentoring aspiring developers and sharing knowledge through blog posts and tutorials.
-          </p>
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+              className="bg-card rounded-lg p-6 border hover:border-primary hover:shadow-lg transition-all duration-300"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">🏃‍♂️</span>
+                  <p className="text-muted-foreground">Exploring hiking trails and staying active</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">📚</span>
+                  <p className="text-muted-foreground">Reading science fiction and tech blogs</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">📸</span>
+                  <p className="text-muted-foreground">Experimenting with photography</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
+              className="bg-card rounded-lg p-6 border hover:border-primary hover:shadow-lg transition-all duration-300"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">👨‍🏫</span>
+                  <p className="text-muted-foreground">Mentoring aspiring developers</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">✍️</span>
+                  <p className="text-muted-foreground">Writing technical blog posts</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">🤝</span>
+                  <p className="text-muted-foreground">Contributing to tech communities</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
+      </motion.div>
     </div>
   );
+  
 }
