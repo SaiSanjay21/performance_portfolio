@@ -1,0 +1,38 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="skinGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDF6E3"/>
+      <stop offset="100%" stop-color="#EAD7B7"/>
+    </radialGradient>
+    <linearGradient id="shadowGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B4B4B4" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#22223B" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="texture" x="0" y="0" width="180" height="180" filterUnits="userSpaceOnUse">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="turb"/>
+      <feDisplacementMap in2="turb" in="SourceGraphic" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <circle cx="90" cy="90" r="86" fill="#F9F9F9" stroke="#22223B" stroke-width="6"/>
+  <ellipse cx="90" cy="110" rx="60" ry="50" fill="#E0E7FF"/>
+  <ellipse cx="90" cy="75" rx="44" ry="40" fill="url(#skinGradient)" filter="url(#texture)"/>
+  <ellipse cx="65" cy="80" rx="10" ry="14" fill="#fff" stroke="#22223B" stroke-width="2.5"/>
+  <ellipse cx="115" cy="80" rx="10" ry="14" fill="#fff" stroke="#22223B" stroke-width="2.5"/>
+  <circle cx="65" cy="84" r="3.5" fill="#22223B"/>
+  <circle cx="115" cy="84" r="3.5" fill="#22223B"/>
+  <ellipse cx="90" cy="128" rx="20" ry="10" fill="#fff" stroke="#22223B" stroke-width="2.5"/>
+  <path d="M70 65 Q80 50 90 50 Q100 50 110 65" stroke="#22223B" stroke-width="2.5" fill="none"/>
+  <rect x="54" y="50" width="18" height="8" rx="4" fill="#B4B4B4" stroke="#22223B" stroke-width="2"/>
+  <rect x="108" y="50" width="18" height="8" rx="4" fill="#B4B4B4" stroke="#22223B" stroke-width="2"/>
+  <rect x="74" y="135" width="32" height="12" rx="6" fill="#B4B4B4" stroke="#22223B" stroke-width="2"/>
+  <rect x="78" y="142" width="24" height="4" rx="2" fill="#fff"/>
+  <rect x="60" y="100" width="60" height="12" rx="6" fill="#fff" stroke="#22223B" stroke-width="2"/>
+  <ellipse cx="90" cy="108" rx="28" ry="6" fill="#B4B4B4"/>
+  <ellipse cx="90" cy="108" rx="18" ry="3" fill="#fff"/>
+  <rect x="40" y="150" width="100" height="18" rx="9" fill="#B4B4B4" stroke="#22223B" stroke-width="2"/>
+  <ellipse cx="90" cy="162" rx="28" ry="6" fill="#fff"/>
+  <ellipse cx="90" cy="162" rx="18" ry="3" fill="#B4B4B4"/>
+  <rect x="74" y="168" width="32" height="8" rx="4" fill="#fff" stroke="#22223B" stroke-width="2"/>
+  <rect x="78" y="172" width="24" height="3" rx="1.5" fill="#B4B4B4"/>
+  <text x="90" y="178" text-anchor="middle" font-size="14" fill="#22223B" font-family="monospace">{ dev }</text>
+</svg>
