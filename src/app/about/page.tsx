@@ -1,11 +1,7 @@
-"use client";
-import { 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle, 
-  CardDescription 
-} from "@/components/ui/card";  // Path correction
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
+import { TechStackTimeline } from "@/components/TechStackTimeline"; // Added import
 import { motion } from "framer-motion";
 import Image from "next/image";
 export default function AboutPage() {
@@ -37,6 +33,13 @@ export default function AboutPage() {
             <svg width="28" height="28" fill="currentColor" className="text-primary"><use href="#icon-linkedin" /></svg>
           </a>
         </div>
+        <p className="text-lg text-muted-foreground mb-8">
+          Beyond coding, I enjoy exploring new technologies, contributing to
+          open-source projects, and continuously learning. Let's connect and
+          build something amazing together!
+        </p>
+        {/* Added TechStackTimeline component */}
+        <TechStackTimeline />
       </div>
     </div>
   );

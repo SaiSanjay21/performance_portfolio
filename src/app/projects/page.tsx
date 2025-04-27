@@ -13,7 +13,7 @@ const projects = [
       "A data visualization dashboard that transforms complex datasets into actionable insights through interactive charts, graphs, and real-time analytics. Designed for business intelligence and performance monitoring.",
     longDescription:
       "This dashboard application was created to help companies visualize and analyze their business metrics in real-time. It features customizable widgets, multiple data visualization options (bar charts, line graphs, pie charts, etc.), and the ability to filter data by various parameters. Users can create personalized dashboards for different departments and set up automated reports. The application includes role-based access control and integrates with various data sources through API connections.",
-    technologies: ["Vue.js", "D3.js", "Chart.js", "Firebase", "Tailwind CSS", "REST APIs", "NoSQL Database"],
+    technologies: ["Vue.js", "D3.js", "Chart.js", "Firebase", "Tailwind CSS", "REST APIs", "NoSQL Database", "Java", "Spring Boot", "AWS", "DevOps"],
     imageUrl: "/projects/dashboard.jpg",
     demoUrl: "https://example.com/dashboard",
     githubUrl: "https://github.com/example/dashboard",
@@ -28,7 +28,7 @@ const projects = [
       "A real-time collaborative task management application that enables teams to organize projects, assign tasks, set deadlines, and track progress. Features include drag-and-drop interfaces, file attachments, and team chat.",
     longDescription:
       "This task management application was built to streamline team collaboration and project management. It features a drag-and-drop kanban board interface, real-time updates using WebSockets, task assignment with email notifications, and integrated file storage. Teams can create multiple project boards, set up custom workflows, add comments to tasks, and track time spent on each task. The application includes a reporting feature that generates insights about team productivity and project progress.",
-    technologies: ["React", "Node.js", "Express", "Socket.io", "MongoDB", "Redux", "JWT Authentication"],
+    technologies: ["React", "Node.js", "Express", "Socket.io", "MongoDB", "Redux", "JWT Authentication", "Java", "Spring Boot", "AWS", "DevOps"],
     imageUrl: "/projects/taskmanager.png",
     demoUrl: "https://example.com/taskmanager",
     githubUrl: "https://github.com/example/taskmanager",
@@ -43,7 +43,7 @@ const projects = [
       "A mobile-first fitness tracking application that helps users set goals, log workouts, monitor nutrition, and visualize progress over time with interactive charts and personalized insights.",
     longDescription:
       "This fitness tracking application was designed to help users maintain a healthy lifestyle by tracking various aspects of their fitness journey. Users can create custom workout routines, log exercises with sets and reps, track calorie intake, monitor weight changes, and set fitness goals. The app provides visual representations of progress through charts and graphs, offers workout recommendations based on user preferences, and includes social features for connecting with friends. Integration with wearable devices allows for automatic activity tracking.",
-    technologies: ["React Native", "Firebase", "Chart.js", "Google Fit API", "Apple HealthKit", "Node.js", "Express"],
+    technologies: ["React Native", "Firebase", "Chart.js", "Google Fit API", "Apple HealthKit", "Node.js", "Express", "Java", "Spring Boot", "AWS", "DevOps"],
     imageUrl: "/projects/fitness-tracker.webp",
     demoUrl: "https://example.com/fitness",
     githubUrl: "https://github.com/example/fitness",
@@ -58,7 +58,7 @@ const projects = [
       "A full-featured content management system with rich text editing, image optimization, SEO tools, and user management. Includes a commenting system and content scheduling.",
     longDescription:
       "This modern CMS platform was built to provide content creators with a powerful yet user-friendly tool for managing their digital content. The system includes a rich text editor with markdown support, image upload with automatic optimization, SEO analysis tools, and scheduled publishing. Administrators can manage user roles and permissions, moderate comments, and track content performance through built-in analytics. The platform supports multilingual content and features a responsive design for both the admin interface and public-facing pages.",
-    technologies: ["Next.js", "Prisma", "PostgreSQL", "TipTap Editor", "NextAuth.js", "Tailwind CSS", "Vercel"],
+    technologies: ["Next.js", "Prisma", "PostgreSQL", "TipTap Editor", "NextAuth.js", "Tailwind CSS", "Vercel", "Java", "Spring Boot", "AWS", "DevOps"],
     imageUrl: "/projects/placeholder-project.jpg",
     demoUrl: "https://example.com/cms",
     githubUrl: "https://github.com/example/cms",
@@ -70,7 +70,7 @@ const projects = [
     id: 'unisearch',
     title: 'UniSearch',
     description: 'Intelligent communication search platform that unifies customer interactions across channels using advanced NLP for enhanced financial services support',
-    technologies: ['React', 'Spring Boot', 'AWS', 'NLP', 'Microservices', 'PostgreSQL'],
+    technologies: ['React', 'Spring Boot', 'AWS', 'NLP', 'Microservices', 'PostgreSQL', 'Java', 'DevOps'],
     imageUrl: '/projects/search-engine.svg',
     demoUrl: 'https://example.com/unisearch',
     githubUrl: 'https://github.com/example/unisearch',
