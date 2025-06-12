@@ -154,7 +154,7 @@ export default function ContactPage() {
             <CardFooter className="flex gap-4">
               <Button variant="outline" size="icon" asChild>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/SaiSanjay21"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -164,7 +164,7 @@ export default function ContactPage() {
               </Button>
               <Button variant="outline" size="icon" asChild>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/saisanjaybandarupalli/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
