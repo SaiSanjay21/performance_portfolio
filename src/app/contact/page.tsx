@@ -148,7 +148,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center">
                 <AtSign className="h-5 w-5 mr-3 text-muted-foreground" />
-                <span>hello@example.com</span>
+                <span>saisanjaybandarupalli.a@gmail.com</span>
               </div>
             </CardContent>
             <CardFooter className="flex gap-4">

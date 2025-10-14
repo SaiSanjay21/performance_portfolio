@@ -67,3 +67,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Smooth scrolling and subtle scroll snap polish */
+html {
+  scroll-behavior: smooth;
+}
