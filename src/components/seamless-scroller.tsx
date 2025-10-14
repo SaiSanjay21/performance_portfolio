@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -12,9 +12,7 @@ export function SeamlessScroller({ children }: SeamlessScrollerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ container: containerRef });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.98]);
-  const blur = useTransform(scrollYProgress, [0, 1], [0, 6]);
-  const filter = useMotionTemplate`blur(${blur}px)`;
+  // Remove global blur/scale to ensure maximum clarity
 
   useEffect(() => {
     // Ensure smooth scrolling on supported browsers
@@ -32,9 +30,9 @@ export function SeamlessScroller({ children }: SeamlessScrollerProps) {
         "snap-y snap-mandatory"
       )}
     >
-      <motion.div style={{ scale, filter }}>
+      <div>
         {children}
-      </motion.div>
+      </div>
 
       {/* Progress dots */}
       <motion.div

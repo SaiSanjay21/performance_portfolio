@@ -1,11 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ArrowRight, Code, Github, MessagesSquare, Zap } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SeamlessScroller, Section } from "@/components/seamless-scroller";
 import Image from "next/image";
+// Removed game-like puzzle gate; focusing on animated information presentation
 
 export default function Home() {
   return (
@@ -41,29 +43,29 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Feature badges */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-              <div className="flex flex-col items-center p-6 bg-card/60 backdrop-blur rounded-lg border shadow-sm hover:shadow-md transition-shadow">
+            {/* Feature badges (standardized Card styling) */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 items-stretch">
+              <Card className="p-6 flex flex-col items-center hover:shadow-md transition-shadow">
                 <div className="p-3 rounded-full bg-primary/10 mb-4">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Clean Code</h3>
-                <p className="text-center text-muted-foreground">Maintainable, efficient, and scalable.</p>
-              </div>
-              <div className="flex flex-col items-center p-6 bg-card/60 backdrop-blur rounded-lg border shadow-sm hover:shadow-md transition-shadow">
+                <CardTitle className="text-xl mb-2">Clean Code</CardTitle>
+                <CardDescription className="text-center">Maintainable, efficient, and scalable.</CardDescription>
+              </Card>
+              <Card className="p-6 flex flex-col items-center hover:shadow-md transition-shadow">
                 <div className="p-3 rounded-full bg-primary/10 mb-4">
                   <Zap className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Performance</h3>
-                <p className="text-center text-muted-foreground">Optimized for speed and responsiveness.</p>
-              </div>
-              <div className="flex flex-col items-center p-6 bg-card/60 backdrop-blur rounded-lg border shadow-sm hover:shadow-md transition-shadow">
+                <CardTitle className="text-xl mb-2">Performance</CardTitle>
+                <CardDescription className="text-center">Optimized for speed and responsiveness.</CardDescription>
+              </Card>
+              <Card className="p-6 flex flex-col items-center hover:shadow-md transition-shadow">
                 <div className="p-3 rounded-full bg-primary/10 mb-4">
                   <MessagesSquare className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">UX Craft</h3>
-                <p className="text-center text-muted-foreground">Thoughtful interactions and clarity.</p>
-              </div>
+                <CardTitle className="text-xl mb-2">UX Craft</CardTitle>
+                <CardDescription className="text-center">Thoughtful interactions and clarity.</CardDescription>
+              </Card>
             </div>
           </div>
         </Section>
@@ -149,7 +151,7 @@ export default function Home() {
 
         {/* Projects */}
         <Section id="projects" className="container">
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex justify-between items-center mb-8 border-t-0">
             <h2 className="text-3xl font-bold">Featured Projects</h2>
             <Button variant="ghost" asChild>
               <Link href="/projects" className="flex items-center">
@@ -158,14 +160,49 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* UniSearch */}
-            <div className="group relative overflow-hidden rounded-lg border bg-card transition-all hover:shadow-md">
+          {/* Recruiter-focused highlights (standardized Card styling + animation) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-stretch">
+            {[
+              { title: "Achievements", text: "Shipped 25+ features; led cross-functional deliveries." },
+              { title: "Skills Demonstration", text: "React/Next.js, Spring Boot, Python AI, Cloud platforms." },
+              { title: "Impact Metrics", text: "1M+ req/day; p95 &lt; 120ms; 99.9% uptime." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.35, delay: 0.05 * i }}
+                className="h-full"
+              >
+                <Card className="h-full hover:shadow-md transition-shadow">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg font-semibold">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <CardDescription>{item.text}</CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Horizontal snap-scrolling projects row */}
+          <div className="overflow-x-auto no-scrollbar scroll-smooth -mx-4 px-4 pb-2">
+            <div className="flex gap-6 snap-x snap-mandatory">
+              {/* UniSearch */}
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4 }}
+              className="snap-start w-[260px] md:w-[300px] group relative overflow-hidden rounded-lg border bg-card hover:shadow-md"
+            >
               <div className="h-48 w-full bg-muted flex items-center justify-center">
                 <Image src="/projects/search-engine.svg" alt="UniSearch" width={160} height={120} />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold mb-2">UniSearch</h3>
+                <h3 className="text-xl font-semibold mb-2">UniSearch</h3>
                 <p className="text-muted-foreground mb-4">Unified NLP search across customer channels for financial services.</p>
                 <div className="flex gap-2">
                   <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">React</span>
@@ -173,15 +210,21 @@ export default function Home() {
                   <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">AWS</span>
                 </div>
               </div>
-            </div>
+            </motion.article>
 
             {/* EduFlow */}
-            <div className="group relative overflow-hidden rounded-lg border bg-card transition-all hover:shadow-md">
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.05 }}
+              className="snap-start w-[260px] md:w-[300px] group relative overflow-hidden rounded-lg border bg-card hover:shadow-md"
+            >
               <div className="h-48 w-full bg-muted flex items-center justify-center">
                 <Image src="/projects/education-system.svg" alt="EduFlow" width={160} height={120} />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold mb-2">EduFlow</h3>
+                <h3 className="text-xl font-semibold mb-2">EduFlow</h3>
                 <p className="text-muted-foreground mb-4">Modern LMS with intuitive dashboards and RBAC.</p>
                 <div className="flex gap-2">
                   <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">React</span>
@@ -189,15 +232,21 @@ export default function Home() {
                   <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">Azure</span>
                 </div>
               </div>
-            </div>
+            </motion.article>
 
             {/* SplitAI */}
-            <div className="group relative overflow-hidden rounded-lg border bg-card transition-all hover:shadow-md">
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="snap-start w-[260px] md:w-[300px] group relative overflow-hidden rounded-lg border bg-card hover:shadow-md"
+            >
               <div className="h-48 w-full bg-muted flex items-center justify-center">
                 <Image src="/projects/expense-app.svg" alt="SplitAI" width={160} height={120} />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold mb-2">SplitAI</h3>
+                <h3 className="text-xl font-semibold mb-2">SplitAI</h3>
                 <p className="text-muted-foreground mb-4">AI‑powered expense splitting with vision‑based receipt parsing.</p>
                 <div className="flex gap-2">
                   <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">Python</span>
@@ -205,6 +254,7 @@ export default function Home() {
                   <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">Azure</span>
                 </div>
               </div>
+            </motion.article>
             </div>
           </div>
         </Section>
